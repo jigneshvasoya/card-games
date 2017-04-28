@@ -30,3 +30,11 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
 
 from app import views
 
+appbuilder.add_view(views.SuitModelView, "Suits",icon = "fa-folder-open-o",category = "Decks",
+                category_icon = "fa-envelope")
+appbuilder.add_view(views.CardModelView, "Cards",icon = "fa-folder-open-o",category = "Decks",
+                category_icon = "fa-envelope")
+appbuilder.add_view(views.DeckNameModelView, "DeckNames",icon = "fa-folder-open-o",category = "Decks",
+                category_icon = "fa-envelope")
+appbuilder.add_view(views.DeckModelView, "Decks",icon = "fa-folder-open-o",category = "Decks",
+                category_icon = "fa-envelope")

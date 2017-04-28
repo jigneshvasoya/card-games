@@ -30,7 +30,7 @@ CSRF_ENABLED = True
 # AUTH_DB : Is for database (username/password()
 # AUTH_LDAP : Is for LDAP
 # AUTH_REMOTE_USER : Is for using REMOTE_USER from web server
-AUTH_TYPE = AUTH_DB
+#AUTH_TYPE = AUTH_DB
 
 # Uncomment to setup Full admin role name
 #AUTH_ROLE_ADMIN = 'Admin'
@@ -53,6 +53,26 @@ AUTH_TYPE = AUTH_DB
 #    { 'name': 'AOL', 'url': 'http://openid.aol.com/<username>' },
 #    { 'name': 'Flickr', 'url': 'http://www.flickr.com/<username>' },
 #    { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }]
+
+#AUTH_TYPE = AUTH_DB
+AUTH_TYPE = AUTH_OAUTH
+
+OAUTH_PROVIDERS = [
+    {'name':'google', 'icon':'fa-google', 'token_key':'access_token',
+        'remote_app': {
+            'consumer_key':'934600541124-1eaempuaft4kosc4hc0eq1rmo77fgdsi.apps.googleusercontent.com',
+            'consumer_secret':'jmQKUrftdKFnrWkUy58bMAWn',
+            'base_url':'https://www.googleapis.com/plus/v1/',
+            'request_token_params':{
+              'scope': 'https://www.googleapis.com/auth/userinfo.email'
+            },
+            'request_token_url':None,
+            'access_token_url':'https://accounts.google.com/o/oauth2/token',
+            'authorize_url':'https://accounts.google.com/o/oauth2/auth'}
+    }
+]
+
+
 #---------------------------------------------------
 # Babel config for translations
 #---------------------------------------------------
@@ -84,6 +104,24 @@ IMG_UPLOAD_FOLDER = basedir + '/app/static/uploads/'
 IMG_UPLOAD_URL = '/static/uploads/'
 # Setup image size default is (300, 200, True)
 #IMG_SIZE = (300, 200, True)
+
+#--------------------------------------
+# User registration
+AUTH_USER_REGISTRATION = True
+AUTH_USER_REGISTRATION_ROLE = 'Admin'
+# Config for Flask-WTF Recaptcha necessary for user registration
+RECAPTCHA_PUBLIC_KEY = '6LedRP0SAAAAAOF03Nsv_ny2NzOF_Dthe_Xn269v'
+RECAPTCHA_PRIVATE_KEY = '6LedRP0SAAAAAPnsdEKgj5VU1QbFcPv7mO8cW0So'
+# Config for Flask-Mail necessary for user registration
+
+MAIL_PORT=587
+MAIL_USE_SSL=False
+MAIL_SERVER = 'smtp.gmail.com'
+MAIL_USE_TLS = True
+MAIL_USERNAME = 'jignesh.vasoya@gslab.com'
+MAIL_PASSWORD = 'new123$pass'
+MAIL_DEFAULT_SENDER = 'jignesh.vasoya@gslab.com'
+#--------------------------------------
 
 # Theme configuration
 # these are located on static/appbuilder/css/themes
