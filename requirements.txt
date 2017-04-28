@@ -3,3 +3,5 @@ Flask-AppBuilder
 WTForms==1.0.5
 Flask-login
 Flask-Security
+flask-oauthlib
+pillow
