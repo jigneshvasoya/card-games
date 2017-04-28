@@ -61,7 +61,7 @@ OAUTH_PROVIDERS = [
     {'name':'google', 'icon':'fa-google', 'token_key':'access_token',
         'remote_app': {
             'consumer_key':'934600541124-1eaempuaft4kosc4hc0eq1rmo77fgdsi.apps.googleusercontent.com',
-            'consumer_secret':'jmQKUrftdKFnrWkUy58bMAWn',
+            'consumer_secret':'your-secret',
             'base_url':'https://www.googleapis.com/plus/v1/',
             'request_token_params':{
               'scope': 'https://www.googleapis.com/auth/userinfo.email'
