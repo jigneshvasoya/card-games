@@ -1,6 +1,6 @@
 Flask
 Flask-AppBuilder
-WTForms==1.0.5
+WTForms
 Flask-login
 Flask-Security
 flask-oauthlib
