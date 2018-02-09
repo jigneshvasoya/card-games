@@ -118,9 +118,9 @@ MAIL_PORT=587
 MAIL_USE_SSL=False
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_USE_TLS = True
-MAIL_USERNAME = 'jignesh.vasoya@gslab.com'
-MAIL_PASSWORD = 'new123$pass'
-MAIL_DEFAULT_SENDER = 'jignesh.vasoya@gslab.com'
+MAIL_USERNAME = '<your-email>'
+MAIL_PASSWORD = '<passowrd>'
+MAIL_DEFAULT_SENDER = '<your-email>'
 #--------------------------------------
 
 # Theme configuration
